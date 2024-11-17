@@ -1,0 +1,50 @@
+{E:/FPGA_Projects/WLAN/Phase 4/TX/FIFO.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 4/TX/FIFO.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module FIFO
+
+Top level modules:
+	FIFO
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 4/TX/interleaver.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 4/TX/interleaver.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module interleaver
+
+Top level modules:
+	interleaver
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 4/TX/TX_tb.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 4/TX/TX_tb.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module TX_tb
+
+Top level modules:
+	TX_tb
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 4/TX/convEncoder.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 4/TX/convEncoder.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module convEncoder
+
+Top level modules:
+	convEncoder
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 4/TX/scrambler.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 4/TX/scrambler.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module scrambler
+
+Top level modules:
+	scrambler
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 4/TX/encMain.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 4/TX/encMain.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module encMain
+
+Top level modules:
+	encMain
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 4/TX/TX_Controller.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 4/TX/TX_Controller.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module TX_Controller
+
+Top level modules:
+	TX_Controller
+
+} {} {}}

@@ -1,0 +1,586 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: Phase1.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Phase1.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Phase1"
+Output Format                      : NGC
+Target Device                      : xc6vcx75t-2-ff484
+
+---- Source Options
+Top Module Name                    : Phase1
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 1\ISE Project\TX_Scrambler.v" into library work
+Parsing module <TX_Scrambler>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 1\ISE Project\TX_Controller.v" into library work
+Parsing module <TX_Controller>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 1\ISE Project\RX_Descrambler.v" into library work
+Parsing module <RX_Descrambler>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 1\ISE Project\RX_Controller.v" into library work
+Parsing module <RX_Controller>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 1\ISE Project\Phase1.v" into library work
+Parsing module <Phase1>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Phase1>.
+
+Elaborating module <TX_Controller(SEED=7'b1011101,HEADER=12'b111111111111)>.
+WARNING:HDLCompiler:1127 - "E:\FPGA_Projects\WLAN\Phase 1\ISE Project\Phase1.v" Line 50: Assignment to TX_On ignored, since the identifier is never used
+
+Elaborating module <TX_Scrambler>.
+
+Elaborating module <RX_Descrambler>.
+
+Elaborating module <RX_Controller(HEADER=12'b111111111111)>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Phase1>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 1\ISE Project\Phase1.v".
+        SEED = 7'b1011101
+        HEADER = 12'b111111111111
+INFO:Xst:3210 - "E:\FPGA_Projects\WLAN\Phase 1\ISE Project\Phase1.v" line 38: Output port <oTransmit> of the instance <TX_CTRL0> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <Phase1> synthesized.
+
+Synthesizing Unit <TX_Controller>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 1\ISE Project\TX_Controller.v".
+        SEED = 7'b1011101
+        HEADER = 12'b111111111111
+    Found 1-bit register for signal <oData>.
+    Found 1-bit register for signal <oTransmit>.
+    Found 8-bit register for signal <N_DBPS>.
+    Found 16-bit register for signal <TMP_PAD>.
+    Found 16-bit register for signal <counter>.
+    Found 16-bit register for signal <SCMB_Buffer>.
+    Found 36-bit register for signal <Output_Buffer>.
+    Found 3-bit register for signal <cState>.
+    Found finite state machine <FSM_0> for signal <cState>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 9                                              |
+    | Clock              | iClk (rising_edge)                             |
+    | Reset              | iRst (positive)                                |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit subtractor for signal <nextPAD> created at line 62.
+    Found 16-bit subtractor for signal <counter[15]_GND_2_o_sub_40_OUT> created at line 140.
+    Found 16-bit adder for signal <N_PAD> created at line 63.
+    Found 16-bit adder for signal <N_RAW[15]_GND_2_o_add_32_OUT> created at line 123.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  94 D-type flip-flop(s).
+	inferred  12 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <TX_Controller> synthesized.
+
+Synthesizing Unit <TX_Scrambler>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 1\ISE Project\TX_Scrambler.v".
+    Found 7-bit register for signal <LFSR>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <TX_Scrambler> synthesized.
+
+Synthesizing Unit <RX_Descrambler>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 1\ISE Project\RX_Descrambler.v".
+    Found 7-bit register for signal <LFSR>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <RX_Descrambler> synthesized.
+
+Synthesizing Unit <RX_Controller>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 1\ISE Project\RX_Controller.v".
+        HEADER = 12'b111111111111
+    Found 1-bit register for signal <oData>.
+    Found 24-bit register for signal <Input_Buffer>.
+    Found 16-bit register for signal <counter>.
+    Found 2-bit register for signal <cState>.
+    Found finite state machine <FSM_1> for signal <cState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 7                                              |
+    | Clock              | iClk (rising_edge)                             |
+    | Reset              | iRst (positive)                                |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 13-bit subtractor for signal <n0039[12:0]> created at line 49.
+    Found 16-bit subtractor for signal <counter[15]_GND_5_o_sub_22_OUT> created at line 131.
+    Found 1-bit 3-to-1 multiplexer for signal <oData_In> created at line 59.
+    Found 1-bit 4-to-1 multiplexer for signal <oDSCMB_SEN> created at line 59.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  41 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <RX_Controller> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 13-bit subtractor                                     : 1
+ 16-bit addsub                                         : 2
+ 16-bit subtractor                                     : 2
+# Registers                                            : 12
+ 1-bit register                                        : 3
+ 16-bit register                                       : 4
+ 24-bit register                                       : 1
+ 36-bit register                                       : 1
+ 7-bit register                                        : 2
+ 8-bit register                                        : 1
+# Multiplexers                                         : 21
+ 1-bit 2-to-1 multiplexer                              : 6
+ 1-bit 3-to-1 multiplexer                              : 1
+ 1-bit 4-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 10
+ 36-bit 2-to-1 multiplexer                             : 1
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 2
+# Xors                                                 : 5
+ 1-bit xor16                                           : 1
+ 1-bit xor2                                            : 4
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <Input_Buffer_16> of sequential type is unconnected in block <RX_CTRL0>.
+WARNING:Xst:2677 - Node <Input_Buffer_17> of sequential type is unconnected in block <RX_CTRL0>.
+WARNING:Xst:2677 - Node <Input_Buffer_18> of sequential type is unconnected in block <RX_CTRL0>.
+WARNING:Xst:2677 - Node <Input_Buffer_19> of sequential type is unconnected in block <RX_CTRL0>.
+WARNING:Xst:2677 - Node <Input_Buffer_20> of sequential type is unconnected in block <RX_CTRL0>.
+WARNING:Xst:2677 - Node <Input_Buffer_21> of sequential type is unconnected in block <RX_CTRL0>.
+WARNING:Xst:2677 - Node <Input_Buffer_22> of sequential type is unconnected in block <RX_CTRL0>.
+WARNING:Xst:2677 - Node <Input_Buffer_23> of sequential type is unconnected in block <RX_CTRL0>.
+WARNING:Xst:2677 - Node <Input_Buffer_16> of sequential type is unconnected in block <RX_Controller>.
+WARNING:Xst:2677 - Node <Input_Buffer_17> of sequential type is unconnected in block <RX_Controller>.
+WARNING:Xst:2677 - Node <Input_Buffer_18> of sequential type is unconnected in block <RX_Controller>.
+WARNING:Xst:2677 - Node <Input_Buffer_19> of sequential type is unconnected in block <RX_Controller>.
+WARNING:Xst:2677 - Node <Input_Buffer_20> of sequential type is unconnected in block <RX_Controller>.
+WARNING:Xst:2677 - Node <Input_Buffer_21> of sequential type is unconnected in block <RX_Controller>.
+WARNING:Xst:2677 - Node <Input_Buffer_22> of sequential type is unconnected in block <RX_Controller>.
+WARNING:Xst:2677 - Node <Input_Buffer_23> of sequential type is unconnected in block <RX_Controller>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 13-bit subtractor                                     : 1
+ 16-bit addsub                                         : 2
+ 16-bit subtractor                                     : 2
+# Registers                                            : 141
+ Flip-Flops                                            : 141
+# Multiplexers                                         : 41
+ 1-bit 2-to-1 multiplexer                              : 28
+ 1-bit 3-to-1 multiplexer                              : 1
+ 1-bit 4-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 9
+ 36-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 2
+# Xors                                                 : 5
+ 1-bit xor16                                           : 1
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <TX_CTRL0/FSM_0> on signal <cState[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <RX_CTRL0/FSM_1> on signal <cState[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
+WARNING:Xst:1710 - FF/Latch <N_DBPS_0> (without init value) has a constant value of 0 in block <TX_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <N_DBPS_1> (without init value) has a constant value of 0 in block <TX_Controller>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Phase1> ...
+
+Optimizing unit <TX_Controller> ...
+
+Optimizing unit <TX_Scrambler> ...
+
+Optimizing unit <RX_Descrambler> ...
+
+Optimizing unit <RX_Controller> ...
+WARNING:Xst:2677 - Node <TX_CTRL0/oTransmit> of sequential type is unconnected in block <Phase1>.
+WARNING:Xst:1710 - FF/Latch <TX_CTRL0/TMP_PAD_15> (without init value) has a constant value of 0 in block <Phase1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TX_CTRL0/TMP_PAD_14> (without init value) has a constant value of 0 in block <Phase1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TX_CTRL0/TMP_PAD_13> (without init value) has a constant value of 0 in block <Phase1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <TX_CTRL0/TMP_PAD_0> (without init value) has a constant value of 0 in block <Phase1>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Phase1, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 139
+ Flip-Flops                                            : 139
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Phase1.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 343
+#      GND                         : 1
+#      INV                         : 21
+#      LUT1                        : 1
+#      LUT2                        : 10
+#      LUT3                        : 8
+#      LUT4                        : 30
+#      LUT5                        : 78
+#      LUT6                        : 78
+#      MUXCY                       : 56
+#      VCC                         : 1
+#      XORCY                       : 59
+# FlipFlops/Latches                : 139
+#      FDC                         : 73
+#      FDCE                        : 66
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 19
+#      OBUF                        : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vcx75tff484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             139  out of  93120     0%  
+ Number of Slice LUTs:                  226  out of  46560     0%  
+    Number used as Logic:               226  out of  46560     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    242
+   Number with an unused Flip Flop:     103  out of    242    42%  
+   Number with an unused LUT:            16  out of    242     6%  
+   Number of fully used LUT-FF pairs:   123  out of    242    50%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    240     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 139   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 3.236ns (Maximum Frequency: 309.052MHz)
+   Minimum input arrival time before clock: 2.047ns
+   Maximum output required time after clock: 1.265ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 3.236ns (frequency: 309.052MHz)
+  Total number of paths / destination ports: 11345 / 199
+-------------------------------------------------------------------------
+Delay:               3.236ns (Levels of Logic = 20)
+  Source:            TX_CTRL0/counter_1 (FF)
+  Destination:       TX_CTRL0/counter_15 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: TX_CTRL0/counter_1 to TX_CTRL0/counter_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.317   0.708  TX_CTRL0/counter_1 (TX_CTRL0/counter_1)
+     LUT6:I0->O            6   0.061   0.454  TX_CTRL0/CNT_ZERO<15>1 (TX_CTRL0/CNT_ZERO<15>)
+     LUT6:I4->O            1   0.061   0.357  TX_CTRL0/CNT_ZERO<15>3_1 (TX_CTRL0/CNT_ZERO<15>3)
+     LUT3:I2->O            1   0.061   0.339  TX_CTRL0/CNT_ZERO_nState[2]_AND_14_o_inv2 (TX_CTRL0/CNT_ZERO_nState[2]_AND_14_o_inv)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<0> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<0>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<1> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<1>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<2> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<2>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<3> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<3>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<4> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<4>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<5> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<5>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<6> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<6>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<7> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<7>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<8> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<8>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<9> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<9>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<10> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<10>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<11> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<11>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<12> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<12>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<13> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<13>)
+     MUXCY:CI->O           0   0.017   0.000  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<14> (TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_cy<14>)
+     XORCY:CI->O           1   0.204   0.357  TX_CTRL0/Mmux_counter[15]_N_PAD[15]_mux_41_OUT_rs_xor<15> (TX_CTRL0/counter[15]_N_PAD[15]_mux_41_OUT<15>)
+     LUT6:I5->O            1   0.061   0.000  TX_CTRL0/Mmux_counter[15]_N_RAW[15]_mux_44_OUT71 (TX_CTRL0/counter[15]_N_RAW[15]_mux_44_OUT<15>)
+     FDCE:D                   -0.002          TX_CTRL0/counter_15
+    ----------------------------------------
+    Total                      3.236ns (1.020ns logic, 2.216ns route)
+                                       (31.5% logic, 68.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 599 / 267
+-------------------------------------------------------------------------
+Offset:              2.047ns (Levels of Logic = 12)
+  Source:            Start (PAD)
+  Destination:       TX_CTRL0/TMP_PAD_12 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: Start to TX_CTRL0/TMP_PAD_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            91   0.003   0.707  Start_IBUF (Start_IBUF)
+     LUT4:I0->O           15   0.061   0.644  TX_CTRL0/Mmux_counter[15]_N_RAW[15]_mux_44_OUT171 (TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_A<0>_mand)
+     LUT4:I0->O            1   0.061   0.000  TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_lut<4> (TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_lut<4>)
+     MUXCY:S->O            1   0.248   0.000  TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<4> (TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<4>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<5> (TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<5>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<6> (TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<6>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<7> (TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<7>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<8> (TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<8>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<9> (TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<9>)
+     MUXCY:CI->O           1   0.017   0.000  TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<10> (TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<10>)
+     MUXCY:CI->O           0   0.017   0.000  TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<11> (TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_cy<11>)
+     XORCY:CI->O           1   0.204   0.000  TX_CTRL0/Mmux_TMP_PAD[15]_N_RAW[15]_mux_34_OUT_rs_xor<12> (TX_CTRL0/TMP_PAD[15]_N_RAW[15]_mux_34_OUT<12>)
+     FDCE:D                   -0.002          TX_CTRL0/TMP_PAD_12
+    ----------------------------------------
+    Total                      2.047ns (0.696ns logic, 1.351ns route)
+                                       (34.0% logic, 66.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Offset:              1.265ns (Levels of Logic = 2)
+  Source:            RX_CTRL0/cState_FSM_FFd2 (FF)
+  Destination:       Output_Valid (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: RX_CTRL0/cState_FSM_FFd2 to Output_Valid
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             23   0.317   0.545  RX_CTRL0/cState_FSM_FFd2 (RX_CTRL0/cState_FSM_FFd2)
+     LUT2:I0->O            1   0.061   0.339  RX_CTRL0/cState_oValid1 (Output_Valid_OBUF)
+     OBUF:I->O                 0.003          Output_Valid_OBUF (Output_Valid)
+    ----------------------------------------
+    Total                      1.265ns (0.381ns logic, 0.884ns route)
+                                       (30.1% logic, 69.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk            |    3.236|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.62 secs
+ 
+--> 
+
+Total memory usage is 4519908 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "E:/FPGA_Projects/WLAN/Phase 1/ISE Project/Phase1.xst" -ofn "E:/FPGA_Projects/WLAN/Phase 1/ISE Project/Phase1.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Projects/WLAN/Phase 1/ISE Project/Phase1.xst" -ofn "E:/FPGA_Projects/WLAN/Phase 1/ISE Project/Phase1.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Projects/WLAN/Phase 1/ISE Project/Phase1.xst" -ofn "E:/FPGA_Projects/WLAN/Phase 1/ISE Project/Phase1.syr" 
+xst -intstyle ise -ifn "E:/FPGA_Projects/WLAN/Phase 1/ISE Project/Phase1.xst" -ofn "E:/FPGA_Projects/WLAN/Phase 1/ISE Project/Phase1.syr" 

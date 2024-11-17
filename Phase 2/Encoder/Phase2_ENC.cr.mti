@@ -1,0 +1,22 @@
+{E:/FPGA_Projects/WLAN/Phase 2/Encoder/convEncoder.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 2/Encoder/convEncoder.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module convEncoder
+
+Top level modules:
+	convEncoder
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 2/Encoder/TX_Controller.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 2/Encoder/TX_Controller.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module TX_Controller
+
+Top level modules:
+	TX_Controller
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 2/Encoder/encoder_tb.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 2/Encoder/encoder_tb.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module encoder_tb
+
+Top level modules:
+	encoder_tb
+
+} {} {}}

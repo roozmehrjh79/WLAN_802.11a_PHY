@@ -1,0 +1,281 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/FPGA_Projects/WLAN/Phase 4/TX
+vACSU
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 `n_NP;jh<;G6D`IIdRem61
+I6lHGgnF5B_dPF8AlbB?lV0
+Z1 dE:/FPGA_Projects/WLAN/Phase 4/RX
+w1625727155
+8E:/FPGA_Projects/WLAN/Phase 4/RX/ACSU.v
+FE:/FPGA_Projects/WLAN/Phase 4/RX/ACSU.v
+L0 7
+Z2 OL;L;10.6d;65
+Z3 !s108 1625817360.000000
+!s107 E:/FPGA_Projects/WLAN/Phase 4/RX/ACSU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 4/RX/ACSU.v|
+!i113 0
+Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0
+n@a@c@s@u
+vASPRAM
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 R4_WPTVTcC]Cf1kAd`l3S3
+IhQLUk6VO^e1OGg0K>n7PX2
+R1
+w1625727163
+8E:/FPGA_Projects/WLAN/Phase 4/RX/ASPRAM.v
+FE:/FPGA_Projects/WLAN/Phase 4/RX/ASPRAM.v
+L0 7
+R2
+R3
+!s107 E:/FPGA_Projects/WLAN/Phase 4/RX/ASPRAM.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 4/RX/ASPRAM.v|
+!i113 0
+R4
+R5
+n@a@s@p@r@a@m
+vBMU
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 HWflS;Iz=cnY]HFoU3Mm72
+If[6l8BVmGbbkR;YES8Lb]3
+R1
+w1625727168
+8E:/FPGA_Projects/WLAN/Phase 4/RX/BMU.v
+FE:/FPGA_Projects/WLAN/Phase 4/RX/BMU.v
+L0 7
+R2
+R3
+!s107 E:/FPGA_Projects/WLAN/Phase 4/RX/BMU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 4/RX/BMU.v|
+!i113 0
+R4
+R5
+n@b@m@u
+vdeinterleaver
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 YCcSg6BDUL1RXcLFTekA12
+I1O>2`N?HfWkbdHVA[RHLZ2
+R1
+w1625727172
+8E:/FPGA_Projects/WLAN/Phase 4/RX/deinterleaver.v
+FE:/FPGA_Projects/WLAN/Phase 4/RX/deinterleaver.v
+L0 7
+R2
+R3
+!s107 E:/FPGA_Projects/WLAN/Phase 4/RX/deinterleaver.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 4/RX/deinterleaver.v|
+!i113 0
+R4
+R5
+vdescrambler
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 3obVEM:VhHd229`6b5B[=0
+Ijkb:GA0Xj`0bGAOPC>2Q01
+R1
+w1625727072
+8E:/FPGA_Projects/WLAN/Phase 4/RX/descrambler.v
+FE:/FPGA_Projects/WLAN/Phase 4/RX/descrambler.v
+L0 7
+R2
+Z6 !s108 1625817361.000000
+!s107 E:/FPGA_Projects/WLAN/Phase 4/RX/descrambler.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 4/RX/descrambler.v|
+!i113 0
+R4
+R5
+vFIFO
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 jaiUM[=m`g5WbD_hbASUA3
+IGe[Q6K[Y:a<fWK1aOKz1d0
+R1
+w1625555204
+8E:/FPGA_Projects/WLAN/Phase 4/RX/FIFO.v
+FE:/FPGA_Projects/WLAN/Phase 4/RX/FIFO.v
+L0 7
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 4/RX/FIFO.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 4/RX/FIFO.v|
+!i113 0
+R4
+R5
+n@f@i@f@o
+vLIFO
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 J^8HE4:P^d7T@PQXBDN3j3
+I_LzXT;oLA790ORFhMa2lh3
+R1
+w1625727179
+8E:/FPGA_Projects/WLAN/Phase 4/RX/LIFO.v
+FE:/FPGA_Projects/WLAN/Phase 4/RX/LIFO.v
+L0 7
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 4/RX/LIFO.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 4/RX/LIFO.v|
+!i113 0
+R4
+R5
+n@l@i@f@o
+vPMU
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 AoTd_l7nVB^hXb@o_PDlB2
+IERbJGCJJ@YAj]^Pa7QgGY0
+R1
+w1625727186
+8E:/FPGA_Projects/WLAN/Phase 4/RX/PMU.v
+FE:/FPGA_Projects/WLAN/Phase 4/RX/PMU.v
+L0 7
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 4/RX/PMU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 4/RX/PMU.v|
+!i113 0
+R4
+R5
+n@p@m@u
+vRX_Controller
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 Dm;Y5VCfGzhC^EeKO103g2
+Il@99fjgUPo;eeC7TaASRf2
+R1
+w1625817357
+8E:/FPGA_Projects/WLAN/Phase 4/RX/RX_Controller.v
+FE:/FPGA_Projects/WLAN/Phase 4/RX/RX_Controller.v
+L0 7
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 4/RX/RX_Controller.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 4/RX/RX_Controller.v|
+!i113 0
+R4
+R5
+n@r@x_@controller
+vRX_tb
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 <k<N[[flgm=?OOWfgniD32
+IoWRS;DZHKm]e57DK9InHf2
+R1
+w1625761067
+8E:/FPGA_Projects/WLAN/Phase 4/RX/RX_tb.v
+FE:/FPGA_Projects/WLAN/Phase 4/RX/RX_tb.v
+L0 9
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 4/RX/RX_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 4/RX/RX_tb.v|
+!i113 0
+R4
+R5
+n@r@x_tb
+vSPRAM
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 2CzSO0A1zMn22i5b^C4kZ2
+I:TQof:AH^f>_E8QK?_d:i2
+R1
+w1625727193
+8E:/FPGA_Projects/WLAN/Phase 4/RX/SPRAM.v
+FE:/FPGA_Projects/WLAN/Phase 4/RX/SPRAM.v
+L0 7
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 4/RX/SPRAM.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 4/RX/SPRAM.v|
+!i113 0
+R4
+R5
+n@s@p@r@a@m
+vTBU
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 f;B<[[`o_e;S:k3?Lh9A30
+I:NZoKYEoeUJE1Q0nWc4Ad0
+R1
+w1625740595
+8E:/FPGA_Projects/WLAN/Phase 4/RX/TBU.v
+FE:/FPGA_Projects/WLAN/Phase 4/RX/TBU.v
+L0 7
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 4/RX/TBU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 4/RX/TBU.v|
+!i113 0
+R4
+R5
+n@t@b@u
+vvitDecoder
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 DfMYmOH[6;jaOfNX9Jk6;1
+IB=m[kP:C`J9T^f[];NlI^3
+R1
+w1625728762
+8E:/FPGA_Projects/WLAN/Phase 4/RX/vitDecoder.v
+FE:/FPGA_Projects/WLAN/Phase 4/RX/vitDecoder.v
+L0 7
+R2
+!s108 1625817362.000000
+!s107 E:/FPGA_Projects/WLAN/Phase 4/RX/vitDecoder.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 4/RX/vitDecoder.v|
+!i113 0
+R4
+R5
+nvit@decoder

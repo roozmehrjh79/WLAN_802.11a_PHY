@@ -1,0 +1,136 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/FPGA_Projects/HW04/CORDIC
+vPhase1
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 V7^Qj_nKhCTfDN=eN3MgX2
+Ih3YUkVJfSQ?_PFKHdaIzQ3
+Z1 dE:/FPGA_Projects/WLAN/Phase 1
+w1623497168
+8E:/FPGA_Projects/WLAN/Phase 1/Phase1.v
+FE:/FPGA_Projects/WLAN/Phase 1/Phase1.v
+L0 7
+Z2 OL;L;10.6d;65
+Z3 !s108 1623500928.000000
+!s107 E:/FPGA_Projects/WLAN/Phase 1/Phase1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 1/Phase1.v|
+!i113 0
+Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0
+n@phase1
+vPhase1_tb
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 SNC4dEE24o8E2I9No?ZnP1
+Iii;POCoDJ[9BRhf`L2km92
+R1
+w1623494877
+8E:/FPGA_Projects/WLAN/Phase 1/Phase1_tb.v
+FE:/FPGA_Projects/WLAN/Phase 1/Phase1_tb.v
+L0 9
+R2
+R3
+!s107 E:/FPGA_Projects/WLAN/Phase 1/Phase1_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 1/Phase1_tb.v|
+!i113 0
+R4
+R5
+n@phase1_tb
+vRX_Controller
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 Vzilh;kVP;h@NbZm_XWO_1
+IjF;l?aO3ZL]TCAQY>0N;V1
+R1
+w1623500426
+8E:/FPGA_Projects/WLAN/Phase 1/RX_Controller.v
+FE:/FPGA_Projects/WLAN/Phase 1/RX_Controller.v
+L0 7
+R2
+Z6 !s108 1623500929.000000
+!s107 E:/FPGA_Projects/WLAN/Phase 1/RX_Controller.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 1/RX_Controller.v|
+!i113 0
+R4
+R5
+n@r@x_@controller
+vRX_Descrambler
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 ;nJ]KM7>H3Re4Hn3eaeRM3
+IRmbhY:_?dgg0RYn<NVB]a0
+R1
+w1623248312
+8E:/FPGA_Projects/WLAN/Phase 1/RX_Descrambler.v
+FE:/FPGA_Projects/WLAN/Phase 1/RX_Descrambler.v
+L0 7
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 1/RX_Descrambler.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 1/RX_Descrambler.v|
+!i113 0
+R4
+R5
+n@r@x_@descrambler
+vTX_Controller
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 :N0]5N>a`4I`R437Kzh3P1
+IlVB`dAKMCM<[PHSBe1ZPE0
+R1
+w1623499703
+8E:/FPGA_Projects/WLAN/Phase 1/TX_Controller.v
+FE:/FPGA_Projects/WLAN/Phase 1/TX_Controller.v
+L0 7
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 1/TX_Controller.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 1/TX_Controller.v|
+!i113 0
+R4
+R5
+n@t@x_@controller
+vTX_Scrambler
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 >YDlVGV1h11i:KC:TW_jH2
+I45dDPRUU8UVW35JoTlVY<0
+R1
+w1623247291
+8E:/FPGA_Projects/WLAN/Phase 1/TX_Scrambler.v
+FE:/FPGA_Projects/WLAN/Phase 1/TX_Scrambler.v
+L0 7
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 1/TX_Scrambler.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 1/TX_Scrambler.v|
+!i113 0
+R4
+R5
+n@t@x_@scrambler

@@ -1,0 +1,829 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Reading design: TX_Controller.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TX_Controller.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TX_Controller"
+Output Format                      : NGC
+Target Device                      : xc6vcx75t-2-ff484
+
+---- Source Options
+Top Module Name                    : TX_Controller
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\encMain.v" into library work
+Parsing module <encMain>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\scrambler.v" into library work
+Parsing module <scrambler>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\interleaver.v" into library work
+Parsing module <interleaver>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\FIFO.v" into library work
+Parsing module <FIFO>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\convEncoder.v" into library work
+Parsing module <convEncoder>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\TX_Controller.v" into library work
+Parsing module <TX_Controller>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <TX_Controller>.
+WARNING:HDLCompiler:1127 - "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\TX_Controller.v" Line 95: Assignment to PARITY ignored, since the identifier is never used
+
+Elaborating module <FIFO(ADDR_WIDTH=8)>.
+WARNING:HDLCompiler:1127 - "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\TX_Controller.v" Line 111: Assignment to F0_EMPTY ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\TX_Controller.v" Line 112: Assignment to F0_FULL ignored, since the identifier is never used
+
+Elaborating module <FIFO>.
+WARNING:HDLCompiler:1127 - "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\TX_Controller.v" Line 124: Assignment to F1_FULL ignored, since the identifier is never used
+
+Elaborating module <scrambler>.
+
+Elaborating module <convEncoder>.
+
+Elaborating module <encMain>.
+
+Elaborating module <interleaver>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TX_Controller>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\TX_Controller.v".
+        SEED = 7'b1011101
+        HEADER = 12'b111111111111
+INFO:Xst:3210 - "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\TX_Controller.v" line 104: Output port <oEmpty> of the instance <F0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\TX_Controller.v" line 104: Output port <oFull> of the instance <F0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\TX_Controller.v" line 116: Output port <oFull> of the instance <F1> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <slwClk2>.
+    Found 1-bit register for signal <SIGNAL<17>>.
+    Found 1-bit register for signal <SIGNAL<16>>.
+    Found 1-bit register for signal <SIGNAL<15>>.
+    Found 1-bit register for signal <SIGNAL<14>>.
+    Found 1-bit register for signal <SIGNAL<13>>.
+    Found 1-bit register for signal <SIGNAL<12>>.
+    Found 1-bit register for signal <SIGNAL<11>>.
+    Found 1-bit register for signal <SIGNAL<10>>.
+    Found 1-bit register for signal <SIGNAL<9>>.
+    Found 1-bit register for signal <SIGNAL<8>>.
+    Found 1-bit register for signal <SIGNAL<7>>.
+    Found 1-bit register for signal <SIGNAL<6>>.
+    Found 1-bit register for signal <SIGNAL<5>>.
+    Found 1-bit register for signal <SIGNAL<4>>.
+    Found 1-bit register for signal <SIGNAL<3>>.
+    Found 1-bit register for signal <SIGNAL<2>>.
+    Found 1-bit register for signal <SIGNAL<1>>.
+    Found 1-bit register for signal <SIGNAL<0>>.
+    Found 1-bit register for signal <slwClk1>.
+    Found 4-bit register for signal <cState>.
+    Found 16-bit register for signal <mainCnt>.
+    Found 16-bit register for signal <TMP_PAD>.
+    Found finite state machine <FSM_0> for signal <cState>.
+    -----------------------------------------------------------------------
+    | States             | 12                                             |
+    | Transitions        | 23                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 17                                             |
+    | Clock              | iClk (rising_edge)                             |
+    | Reset              | iRst (positive)                                |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit subtractor for signal <nextPAD> created at line 97.
+    Found 16-bit subtractor for signal <N_RAW[14]_GND_1_o_sub_54_OUT> created at line 339.
+    Found 16-bit subtractor for signal <N_PAD[14]_GND_1_o_sub_57_OUT> created at line 341.
+    Found 10-bit subtractor for signal <GND_1_o_GND_1_o_sub_59_OUT> created at line 343.
+    Found 16-bit subtractor for signal <mainCnt[15]_GND_1_o_sub_61_OUT> created at line 347.
+    Found 16-bit adder for signal <N_PAD> created at line 98.
+    Found 15-bit adder for signal <N_PAD[14]_GND_1_o_add_55_OUT> created at line 341.
+    Found 16-bit adder for signal <n0185> created at line 365.
+    Found 4x8-bit Read Only RAM for signal <_n0276>
+    Found 1-bit 18-to-1 multiplexer for signal <sigPtr[4]_X_1_o_Mux_20_o> created at line 216.
+    Found 5-bit comparator greater for signal <mainCnt[5]_PWR_1_o_LessThan_45_o> created at line 294
+    Summary:
+	inferred   1 RAM(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred  51 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  48 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <TX_Controller> synthesized.
+
+Synthesizing Unit <FIFO_1>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\FIFO.v".
+        DATA_WIDTH = 1
+        ADDR_WIDTH = 8
+        RAM_DEPTH = 256
+    Found 8-bit register for signal <rdPtr>.
+    Found 8-bit register for signal <wrPtr>.
+    Found 9-bit register for signal <stPtr>.
+    Found 256-bit register for signal <n0288[255:0]>.
+    Found 9-bit subtractor for signal <stPtr[8]_GND_2_o_sub_11_OUT> created at line 71.
+    Found 8-bit adder for signal <wrPtr[7]_GND_2_o_add_3_OUT> created at line 53.
+    Found 8-bit adder for signal <rdPtr[7]_GND_2_o_add_6_OUT> created at line 61.
+    Found 9-bit adder for signal <stPtr[8]_GND_2_o_add_9_OUT> created at line 69.
+    Found 1-bit 256-to-1 multiplexer for signal <rdPtr[7]_mem[255][0]_Mux_2_o> created at line 43.
+    Found 8-bit comparator equal for signal <EQU> created at line 34
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 281 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred 258 Multiplexer(s).
+Unit <FIFO_1> synthesized.
+
+Synthesizing Unit <FIFO>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\FIFO.v".
+        DATA_WIDTH = 1
+        ADDR_WIDTH = 6
+        RAM_DEPTH = 64
+    Found 6-bit register for signal <rdPtr>.
+    Found 6-bit register for signal <wrPtr>.
+    Found 7-bit register for signal <stPtr>.
+    Found 64-bit register for signal <n0096[63:0]>.
+    Found 7-bit subtractor for signal <stPtr[6]_GND_3_o_sub_11_OUT> created at line 71.
+    Found 6-bit adder for signal <wrPtr[5]_GND_3_o_add_3_OUT> created at line 53.
+    Found 6-bit adder for signal <rdPtr[5]_GND_3_o_add_6_OUT> created at line 61.
+    Found 7-bit adder for signal <stPtr[6]_GND_3_o_add_9_OUT> created at line 69.
+    Found 1-bit 64-to-1 multiplexer for signal <rdPtr[5]_mem[63][0]_Mux_2_o> created at line 43.
+    Found 6-bit comparator equal for signal <EQU> created at line 34
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  83 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  66 Multiplexer(s).
+Unit <FIFO> synthesized.
+
+Synthesizing Unit <scrambler>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\scrambler.v".
+    Found 7-bit register for signal <LFSR>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <scrambler> synthesized.
+
+Synthesizing Unit <convEncoder>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\convEncoder.v".
+    Found 1-bit register for signal <encOutSel>.
+    Found 1-bit register for signal <oData>.
+    Found 1-bit register for signal <oValid>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <convEncoder> synthesized.
+
+Synthesizing Unit <encMain>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\encMain.v".
+    Found 6-bit register for signal <SREG>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <encMain> synthesized.
+
+Synthesizing Unit <interleaver>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\TX\ISE Project\interleaver.v".
+    Found 1-bit register for signal <selReg>.
+    Found 1-bit register for signal <OUT_EN>.
+    Found 4-bit register for signal <rowCnt>.
+    Found 4-bit register for signal <colCnt>.
+    Found 192-bit register for signal <bReg>.
+    Found 192-bit register for signal <fReg>.
+    Found 4-bit register for signal <RATE>.
+    Found 4-bit subtractor for signal <Ni[3]_GND_7_o_sub_3_OUT> created at line 50.
+    Found 4-bit subtractor for signal <rowCnt[3]_GND_7_o_sub_7_OUT> created at line 66.
+    Found 8-bit adder for signal <jPtr> created at line 49.
+    Found 4-bit adder for signal <rowCnt[3]_GND_7_o_add_21_OUT> created at line 96.
+    Found 4-bit adder for signal <colCnt[3]_GND_7_o_add_25_OUT> created at line 104.
+    Found 4x4-bit multiplier for signal <n0468> created at line 49.
+    Found 4x4-bit Read Only RAM for signal <_n0488>
+    Found 4-bit comparator equal for signal <ROW_EXP> created at line 50
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred 398 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred 390 Multiplexer(s).
+Unit <interleaver> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4x4-bit single-port Read Only RAM                     : 1
+ 4x8-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 1
+ 4x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 17
+ 10-bit subtractor                                     : 1
+ 15-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 16-bit addsub                                         : 1
+ 16-bit subtractor                                     : 2
+ 4-bit adder                                           : 2
+ 4-bit addsub                                          : 1
+ 4-bit subtractor                                      : 1
+ 6-bit adder                                           : 2
+ 7-bit addsub                                          : 1
+ 8-bit adder                                           : 3
+ 9-bit addsub                                          : 1
+# Registers                                            : 41
+ 1-bit register                                        : 24
+ 16-bit register                                       : 2
+ 192-bit register                                      : 2
+ 256-bit register                                      : 1
+ 4-bit register                                        : 3
+ 6-bit register                                        : 3
+ 64-bit register                                       : 1
+ 7-bit register                                        : 2
+ 8-bit register                                        : 2
+ 9-bit register                                        : 1
+# Comparators                                          : 4
+ 4-bit comparator equal                                : 1
+ 5-bit comparator greater                              : 1
+ 6-bit comparator equal                                : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 765
+ 1-bit 18-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 740
+ 1-bit 256-to-1 multiplexer                            : 1
+ 1-bit 64-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 15
+ 4-bit 2-to-1 multiplexer                              : 5
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+# Xors                                                 : 5
+ 1-bit xor2                                            : 3
+ 1-bit xor5                                            : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <FIFO>.
+The following registers are absorbed into counter <rdPtr>: 1 register on signal <rdPtr>.
+The following registers are absorbed into counter <wrPtr>: 1 register on signal <wrPtr>.
+The following registers are absorbed into counter <stPtr>: 1 register on signal <stPtr>.
+Unit <FIFO> synthesized (advanced).
+
+Synthesizing (advanced) Unit <FIFO_1>.
+The following registers are absorbed into counter <rdPtr>: 1 register on signal <rdPtr>.
+The following registers are absorbed into counter <wrPtr>: 1 register on signal <wrPtr>.
+The following registers are absorbed into counter <stPtr>: 1 register on signal <stPtr>.
+Unit <FIFO_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <TX_Controller>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0276> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 8-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <SIGNAL<17:16>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <TX_Controller> synthesized (advanced).
+
+Synthesizing (advanced) Unit <interleaver>.
+The following registers are absorbed into counter <rowCnt>: 1 register on signal <rowCnt>.
+The following registers are absorbed into counter <colCnt>: 1 register on signal <colCnt>.
+	Multiplier <Mmult_n0468> in block <interleaver> and adder/subtractor <Madd_jPtr> in block <interleaver> are combined into a MAC<Maddsub_n0468>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0488> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <RATE<3:2>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <interleaver> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4x4-bit single-port distributed Read Only RAM         : 1
+ 4x8-bit single-port distributed Read Only RAM         : 1
+# MACs                                                 : 1
+ 4x4-to-8-bit MAC                                      : 1
+# Adders/Subtractors                                   : 7
+ 10-bit subtractor                                     : 1
+ 15-bit adder carry in                                 : 1
+ 16-bit addsub                                         : 1
+ 16-bit subtractor                                     : 2
+ 4-bit addsub                                          : 1
+ 4-bit subtractor                                      : 1
+# Counters                                             : 8
+ 4-bit up counter                                      : 2
+ 6-bit up counter                                      : 2
+ 7-bit updown counter                                  : 1
+ 8-bit up counter                                      : 2
+ 9-bit updown counter                                  : 1
+# Registers                                            : 777
+ Flip-Flops                                            : 777
+# Comparators                                          : 4
+ 4-bit comparator equal                                : 1
+ 5-bit comparator greater                              : 1
+ 6-bit comparator equal                                : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 763
+ 1-bit 18-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 740
+ 1-bit 256-to-1 multiplexer                            : 1
+ 1-bit 64-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 15
+ 4-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+# Xors                                                 : 5
+ 1-bit xor2                                            : 3
+ 1-bit xor5                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <cState[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+ 1011  | 1011
+-------------------
+
+Optimizing unit <TX_Controller> ...
+
+Optimizing unit <FIFO> ...
+
+Optimizing unit <encMain> ...
+
+Optimizing unit <interleaver> ...
+
+Optimizing unit <FIFO_1> ...
+
+Optimizing unit <scrambler> ...
+WARNING:Xst:1710 - FF/Latch <TMP_PAD_0> (without init value) has a constant value of 0 in block <TX_Controller>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <TMP_PAD_1> in Unit <TX_Controller> is equivalent to the following FF/Latch, which will be removed : <TMP_PAD_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TX_Controller, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 831
+ Flip-Flops                                            : 831
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TX_Controller.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1427
+#      GND                         : 1
+#      INV                         : 29
+#      LUT1                        : 19
+#      LUT2                        : 27
+#      LUT3                        : 46
+#      LUT4                        : 28
+#      LUT5                        : 115
+#      LUT6                        : 905
+#      MUXCY                       : 96
+#      MUXF7                       : 38
+#      MUXF8                       : 17
+#      VCC                         : 1
+#      XORCY                       : 105
+# FlipFlops/Latches                : 831
+#      FDC                         : 18
+#      FDC_1                       : 1
+#      FDCE                        : 809
+#      FDPE                        : 3
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 22
+#      IBUF                        : 19
+#      OBUF                        : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vcx75tff484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             831  out of  93120     0%  
+ Number of Slice LUTs:                 1169  out of  46560     2%  
+    Number used as Logic:              1169  out of  46560     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1182
+   Number with an unused Flip Flop:     351  out of   1182    29%  
+   Number with an unused LUT:            13  out of   1182     1%  
+   Number of fully used LUT-FF pairs:   818  out of   1182    69%  
+   Number of unique control sets:        16
+
+IO Utilization: 
+ Number of IOs:                          23
+ Number of bonded IOBs:                  23  out of    240     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+iClk                               | BUFGP                  | 537   |
+slwClk2                            | NONE(ENC0/E0/SREG_5)   | 6     |
+slwClk1                            | BUFG                   | 288   |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.522ns (Maximum Frequency: 221.133MHz)
+   Minimum input arrival time before clock: 1.486ns
+   Maximum output required time after clock: 3.797ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'iClk'
+  Clock period: 4.522ns (frequency: 221.133MHz)
+  Total number of paths / destination ports: 1135279 / 1530
+-------------------------------------------------------------------------
+Delay:               4.522ns (Levels of Logic = 11)
+  Source:            INT0/colCnt_1 (FF)
+  Destination:       INT0/fReg_183 (FF)
+  Source Clock:      iClk rising
+  Destination Clock: iClk rising
+
+  Data Path: INT0/colCnt_1 to INT0/fReg_183
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            10   0.317   0.746  INT0/colCnt_1 (INT0/colCnt_1)
+     LUT6:I0->O            1   0.061   0.000  INT0/Maddsub_n0468_Madd2_lut<2> (INT0/Maddsub_n0468_Madd2_lut<2>)
+     MUXCY:S->O            1   0.248   0.000  INT0/Maddsub_n0468_Madd2_cy<2> (INT0/Maddsub_n0468_Madd2_cy<2>)
+     MUXCY:CI->O           1   0.017   0.000  INT0/Maddsub_n0468_Madd2_cy<3> (INT0/Maddsub_n0468_Madd2_cy<3>)
+     XORCY:CI->O           1   0.204   0.426  INT0/Maddsub_n0468_Madd2_xor<4> (INT0/Maddsub_n0468_Madd_42)
+     LUT2:I0->O            1   0.061   0.000  INT0/Maddsub_n0468_Madd3_lut<4> (INT0/Maddsub_n0468_Madd3_lut<4>)
+     MUXCY:S->O            1   0.248   0.000  INT0/Maddsub_n0468_Madd3_cy<4> (INT0/Maddsub_n0468_Madd3_cy<4>)
+     XORCY:CI->O           1   0.204   0.357  INT0/Maddsub_n0468_Madd3_xor<5> (INT0/Maddsub_n0468_5)
+     LUT1:I0->O            1   0.061   0.000  INT0/Maddsub_n0468_Madd_cy<5>_rt (INT0/Maddsub_n0468_Madd_cy<5>_rt)
+     MUXCY:S->O            1   0.248   0.000  INT0/Maddsub_n0468_Madd_cy<5> (INT0/Maddsub_n0468_Madd_cy<5>)
+     XORCY:CI->O          39   0.204   0.557  INT0/Maddsub_n0468_Madd_xor<6> (INT0/jPtr<6>)
+     LUT5:I3->O           16   0.061   0.440  INT0/jPtr[7]_Decoder_29_OUT<16><7>21 (INT0/jPtr[7]_Decoder_29_OUT<16><7>2)
+     LUT6:I5->O            1   0.061   0.000  INT0/fReg[191]_GND_7_o_mux_32_OUT<23>1 (INT0/fReg[191]_GND_7_o_mux_32_OUT<23>)
+     FDCE:D                   -0.002          INT0/fReg_23
+    ----------------------------------------
+    Total                      4.522ns (1.995ns logic, 2.527ns route)
+                                       (44.1% logic, 55.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'slwClk2'
+  Clock period: 0.661ns (frequency: 1512.287MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               0.661ns (Levels of Logic = 0)
+  Source:            ENC0/E0/SREG_4 (FF)
+  Destination:       ENC0/E0/SREG_5 (FF)
+  Source Clock:      slwClk2 falling
+  Destination Clock: slwClk2 falling
+
+  Data Path: ENC0/E0/SREG_4 to ENC0/E0/SREG_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.317   0.344  ENC0/E0/SREG_4 (ENC0/E0/SREG_4)
+     FDCE:D                   -0.002          ENC0/E0/SREG_5
+    ----------------------------------------
+    Total                      0.661ns (0.317ns logic, 0.344ns route)
+                                       (47.9% logic, 52.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'slwClk1'
+  Clock period: 3.604ns (frequency: 277.479MHz)
+  Total number of paths / destination ports: 8448 / 569
+-------------------------------------------------------------------------
+Delay:               3.604ns (Levels of Logic = 5)
+  Source:            F0/wrPtr_4 (FF)
+  Destination:       F0/stPtr_8 (FF)
+  Source Clock:      slwClk1 rising
+  Destination Clock: slwClk1 rising
+
+  Data Path: F0/wrPtr_4 to F0/stPtr_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            34   0.317   0.824  F0/wrPtr_4 (F0/wrPtr_4)
+     LUT6:I1->O            1   0.061   0.426  F0/EQU82 (F0/EQU81)
+     LUT6:I4->O           13   0.061   0.425  F0/EQU83 (F0/EQU)
+     LUT5:I4->O            1   0.061   0.357  F0/oEmpty_SW0 (N14)
+     LUT6:I5->O            3   0.061   0.369  F0/oEmpty (F0/oEmpty)
+     LUT5:I4->O            9   0.061   0.384  F0/_n0319_inv1 (F0/_n0319_inv)
+     FDCE:CE                   0.196          F0/stPtr_0
+    ----------------------------------------
+    Total                      3.604ns (0.818ns logic, 2.786ns route)
+                                       (22.7% logic, 77.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'iClk'
+  Total number of paths / destination ports: 604 / 604
+-------------------------------------------------------------------------
+Offset:              1.486ns (Levels of Logic = 2)
+  Source:            iRst (PAD)
+  Destination:       ENC0/oData (FF)
+  Destination Clock: iClk rising
+
+  Data Path: iRst to ENC0/oData
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            54   0.003   0.491  iRst_IBUF (iRst_IBUF)
+     LUT4:I3->O          778   0.061   0.566  GLB_RST1 (GLB_RST)
+     FDC:CLR                   0.365          ENC0/cState
+    ----------------------------------------
+    Total                      1.486ns (0.429ns logic, 1.057ns route)
+                                       (28.9% logic, 71.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'slwClk2'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              1.486ns (Levels of Logic = 2)
+  Source:            iRst (PAD)
+  Destination:       ENC0/E0/SREG_5 (FF)
+  Destination Clock: slwClk2 falling
+
+  Data Path: iRst to ENC0/E0/SREG_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            54   0.003   0.491  iRst_IBUF (iRst_IBUF)
+     LUT4:I3->O          778   0.061   0.566  GLB_RST1 (GLB_RST)
+     FDCE:CLR                  0.365          ENC0/E0/SREG_0
+    ----------------------------------------
+    Total                      1.486ns (0.429ns logic, 1.057ns route)
+                                       (28.9% logic, 71.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'slwClk1'
+  Total number of paths / destination ports: 544 / 544
+-------------------------------------------------------------------------
+Offset:              1.486ns (Levels of Logic = 2)
+  Source:            iRst (PAD)
+  Destination:       F0/wrPtr_7 (FF)
+  Destination Clock: slwClk1 rising
+
+  Data Path: iRst to F0/wrPtr_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            54   0.003   0.491  iRst_IBUF (iRst_IBUF)
+     LUT4:I3->O          778   0.061   0.566  GLB_RST1 (GLB_RST)
+     FDCE:CLR                  0.365          F0/mem_255_0
+    ----------------------------------------
+    Total                      1.486ns (0.429ns logic, 1.057ns route)
+                                       (28.9% logic, 71.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'iClk'
+  Total number of paths / destination ports: 160 / 3
+-------------------------------------------------------------------------
+Offset:              3.797ns (Levels of Logic = 6)
+  Source:            F1/wrPtr_1 (FF)
+  Destination:       oData (PAD)
+  Source Clock:      iClk rising
+
+  Data Path: F1/wrPtr_1 to oData
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            70   0.317   0.831  F1/wrPtr_1 (F1/wrPtr_1)
+     LUT6:I1->O            6   0.061   0.540  F1/EQU61 (F1/EQU6)
+     LUT4:I1->O            1   0.061   0.357  F1/oEmpty_SW0 (N10)
+     LUT6:I5->O            4   0.061   0.374  F1/oEmpty (F1_EMPTY)
+     LUT2:I1->O            7   0.061   0.730  F1/iR_EN_oEmpty_AND_524_o1 (F1/iR_EN_oEmpty_AND_524_o)
+     LUT6:I0->O            1   0.061   0.339  F1/Mmux_oData1 (oData_OBUF)
+     OBUF:I->O                 0.003          oData_OBUF (oData)
+    ----------------------------------------
+    Total                      3.797ns (0.625ns logic, 3.172ns route)
+                                       (16.5% logic, 83.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock iClk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+iClk           |    4.522|         |    1.069|         |
+slwClk1        |    4.622|         |         |         |
+slwClk2        |         |    1.382|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock slwClk1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+iClk           |    3.580|         |         |         |
+slwClk1        |    3.604|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock slwClk2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+iClk           |         |         |    2.693|         |
+slwClk1        |         |         |    3.860|         |
+slwClk2        |         |         |    0.661|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 18.47 secs
+ 
+--> 
+
+Total memory usage is 4536100 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

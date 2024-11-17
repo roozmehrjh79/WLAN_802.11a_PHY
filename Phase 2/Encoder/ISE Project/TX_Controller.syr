@@ -1,0 +1,437 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: TX_Controller.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TX_Controller.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TX_Controller"
+Output Format                      : NGC
+Target Device                      : xc6vcx75t-2-ff484
+
+---- Source Options
+Top Module Name                    : TX_Controller
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 2\Encoder\ISE Project\convEncoder.v" into library work
+Parsing module <convEncoder>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 2\Encoder\ISE Project\TX_Controller.v" into library work
+Parsing module <TX_Controller>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <TX_Controller>.
+
+Elaborating module <convEncoder>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TX_Controller>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 2\Encoder\ISE Project\TX_Controller.v".
+    Found 1-bit register for signal <oTX>.
+    Found 1-bit register for signal <encOutSel>.
+    Found 1-bit register for signal <oData>.
+    Found 1-bit register for signal <slwClk>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <TX_Controller> synthesized.
+
+Synthesizing Unit <convEncoder>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 2\Encoder\ISE Project\convEncoder.v".
+    Found 6-bit register for signal <SREG>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <convEncoder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 5
+ 1-bit register                                        : 4
+ 6-bit register                                        : 1
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 2
+# Xors                                                 : 2
+ 1-bit xor5                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 2
+# Xors                                                 : 2
+ 1-bit xor5                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TX_Controller> ...
+
+Optimizing unit <convEncoder> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TX_Controller, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TX_Controller.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 4
+#      INV                         : 2
+#      LUT3                        : 1
+#      LUT6                        : 1
+# FlipFlops/Latches                : 10
+#      FDC                         : 8
+#      FDC_1                       : 1
+#      FDCE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 5
+#      IBUF                        : 3
+#      OBUF                        : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vcx75tff484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               9  out of  93120     0%  
+ Number of Slice LUTs:                    4  out of  46560     0%  
+    Number used as Logic:                 4  out of  46560     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      9
+   Number with an unused Flip Flop:       0  out of      9     0%  
+   Number with an unused LUT:             5  out of      9    55%  
+   Number of fully used LUT-FF pairs:     4  out of      9    44%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of    240     2%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+iClk                               | BUFGP                  | 4     |
+slwClk                             | NONE(ENC0/SREG_5)      | 6     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 1.103ns (Maximum Frequency: 906.372MHz)
+   Minimum input arrival time before clock: 1.250ns
+   Maximum output required time after clock: 0.659ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'iClk'
+  Clock period: 1.103ns (frequency: 906.372MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               1.103ns (Levels of Logic = 1)
+  Source:            slwClk (FF)
+  Destination:       slwClk (FF)
+  Source Clock:      iClk falling
+  Destination Clock: iClk falling
+
+  Data Path: slwClk to slwClk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            7   0.312   0.373  slwClk (slwClk)
+     INV:I->O              1   0.079   0.339  slwClk_INV_6_o1_INV_0 (slwClk_INV_6_o)
+     FDC_1:D                  -0.002          slwClk
+    ----------------------------------------
+    Total                      1.103ns (0.391ns logic, 0.712ns route)
+                                       (35.4% logic, 64.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'slwClk'
+  Clock period: 0.661ns (frequency: 1512.287MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               0.661ns (Levels of Logic = 0)
+  Source:            ENC0/SREG_4 (FF)
+  Destination:       ENC0/SREG_5 (FF)
+  Source Clock:      slwClk rising
+  Destination Clock: slwClk rising
+
+  Data Path: ENC0/SREG_4 to ENC0/SREG_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.317   0.344  ENC0/SREG_4 (ENC0/SREG_4)
+     FDC:D                    -0.002          ENC0/SREG_5
+    ----------------------------------------
+    Total                      0.661ns (0.317ns logic, 0.344ns route)
+                                       (47.9% logic, 52.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'iClk'
+  Total number of paths / destination ports: 8 / 7
+-------------------------------------------------------------------------
+Offset:              1.250ns (Levels of Logic = 3)
+  Source:            iData (PAD)
+  Destination:       oData (FF)
+  Destination Clock: iClk rising
+
+  Data Path: iData to oData
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.003   0.431  iData_IBUF (iData_IBUF)
+     LUT3:I1->O            1   0.061   0.694  Mmux_GND_1_o_encOutB_MUX_4_o1_SW0 (N2)
+     LUT6:I1->O            1   0.061   0.000  Mmux_GND_1_o_encOutB_MUX_4_o1 (GND_1_o_encOutB_MUX_4_o)
+     FDC:D                    -0.002          oData
+    ----------------------------------------
+    Total                      1.250ns (0.125ns logic, 1.125ns route)
+                                       (10.0% logic, 90.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'slwClk'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              0.757ns (Levels of Logic = 1)
+  Source:            iRst (PAD)
+  Destination:       ENC0/SREG_5 (FF)
+  Destination Clock: slwClk rising
+
+  Data Path: iRst to ENC0/SREG_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   0.003   0.389  iRst_IBUF (iRst_IBUF)
+     FDC:CLR                   0.365          ENC0/SREG_0
+    ----------------------------------------
+    Total                      0.757ns (0.368ns logic, 0.389ns route)
+                                       (48.6% logic, 51.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'iClk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.659ns (Levels of Logic = 1)
+  Source:            oData (FF)
+  Destination:       oData (PAD)
+  Source Clock:      iClk rising
+
+  Data Path: oData to oData
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.317   0.339  oData (oData_OBUF)
+     OBUF:I->O                 0.003          oData_OBUF (oData)
+    ----------------------------------------
+    Total                      0.659ns (0.320ns logic, 0.339ns route)
+                                       (48.5% logic, 51.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock iClk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+iClk           |    1.079|         |    1.103|         |
+slwClk         |    1.650|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock slwClk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+slwClk         |    0.661|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.25 secs
+ 
+--> 
+
+Total memory usage is 4519908 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

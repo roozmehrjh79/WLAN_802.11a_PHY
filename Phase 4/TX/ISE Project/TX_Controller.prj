@@ -1,0 +1,6 @@
+verilog work "encMain.v"
+verilog work "scrambler.v"
+verilog work "interleaver.v"
+verilog work "FIFO.v"
+verilog work "convEncoder.v"
+verilog work "TX_Controller.v"

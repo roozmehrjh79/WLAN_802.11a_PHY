@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/FPGA_Projects/WLAN/Phase 3/Interleaver
+vdeinterleaver
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 YCcSg6BDUL1RXcLFTekA12
+I6oKLgZ`Zo;>iiflg=oh250
+Z1 dE:/FPGA_Projects/WLAN/Phase 3/Deinterleaver
+w1625643961
+8E:/FPGA_Projects/WLAN/Phase 3/Deinterleaver/deinterleaver.v
+FE:/FPGA_Projects/WLAN/Phase 3/Deinterleaver/deinterleaver.v
+L0 7
+Z2 OL;L;10.6d;65
+Z3 !s108 1625818692.000000
+!s107 E:/FPGA_Projects/WLAN/Phase 3/Deinterleaver/deinterleaver.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 3/Deinterleaver/deinterleaver.v|
+!i113 0
+Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0
+vdeinterleaver_tb
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 S]9a:<i9>^Uo?@B]f61?a3
+INd108FN63Uc]cC9Qb>e1f3
+R1
+w1625139350
+8E:/FPGA_Projects/WLAN/Phase 3/Deinterleaver/deinterleaver_tb.v
+FE:/FPGA_Projects/WLAN/Phase 3/Deinterleaver/deinterleaver_tb.v
+L0 9
+R2
+R3
+!s107 E:/FPGA_Projects/WLAN/Phase 3/Deinterleaver/deinterleaver_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 3/Deinterleaver/deinterleaver_tb.v|
+!i113 0
+R4
+R5

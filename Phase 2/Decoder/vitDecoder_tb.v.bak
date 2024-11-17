@@ -1,0 +1,127 @@
+//===============================================================================
+// FPGA Project - Phase 2
+// Module Name: TEST-BENCH (RX side)
+// Author: Roozmehr Jalilian (97101467)
+//===============================================================================
+`timescale 1ns/1ps
+`define PERIOD 10						// fast clock period
+
+module vitDecoder_tb();
+
+//---------- Local Parameters ----------//
+	parameter SIZE = 30;				// no. of encoded data octets
+//--------------------------------------//
+
+//---------- Wire & Variable Declaration ----------//
+	reg Rst;				// reset
+	reg EN;					// enable
+	reg Data_In;			// serial input
+	wire Data_Out;			// serial output
+	wire Data_Valid;		// RX output validity indicator
+	
+	reg [7:0] V [0:SIZE-1];		// variable for storing input test vector
+	reg [7:0] HEX_IN;		// hexadecimal encoded input
+	reg [7:0] HEX_OUT;		// hexadecimal decoded output
+//-------------------------------------------------//
+
+//---------- Clock Signal Generation ----------//
+	wire slwClk;				// slow clock
+	assign slwClk = DUT.slwClk;
+	
+	reg Clk = 1'b1;
+    always @(Clk)
+        Clk <= #(`PERIOD/2) ~Clk;
+//---------------------------------------------//
+
+//---------- Integer Declaration ----------//
+	integer i, j, k, m;
+    integer fileID1;								// file 1 pointer
+    integer fileID2;								// file 2 pointer
+    integer scan_file1;								// scanf of file 1
+    integer scan_file2;								// scanf of file 2
+//-----------------------------------------//
+
+//---------- Initial Blocks ----------//
+	// Applying stimulus
+    initial begin
+    	Rst = 1;
+    	EN = 0;
+    	Data_In = 0;
+    	$readmemh("input_data.txt", V);
+    	
+    	@(posedge Clk);
+    	@(posedge Clk);
+    	Rst = 0;
+    	@(posedge Clk);
+    	@(posedge Clk);
+    	
+		// Insert data to 'Data_In' port
+		@(negedge Clk);
+		EN = 1;
+    	for (i=0; i<SIZE; i=i+1) begin
+			HEX_IN = V[i];
+			for (j=7; j>-1; j=j-1) begin
+				Data_In = HEX_IN[j];
+				@(negedge Clk);
+			end
+    	end
+    	Data_In = 1'b0;    	
+    end
+    
+	// Writing decoded output to file & Verification
+	initial begin
+		fileID1 = $fopen("output_VERILOG.txt", "w");
+		wait(Data_Valid);							// wait until decoding starts
+		@(negedge Clk);
+		for (m=0; m<SIZE/2; m=m+1) begin
+			for (k=7; k>-1; k=k-1) begin
+				HEX_OUT[k] = Data_Out;
+				@(negedge Clk);
+			end
+			$fwrite(fileID1, "%x\n", HEX_OUT);
+		end
+		$fclose(fileID1);
+		
+		/* UNUSED
+		// NOTE: HEX_IN and HEX_OUT are used to compare VERILOG and MATLAB outputs in here!
+		// Output data check
+		fileID1 = $fopen("output_VERILOG.txt", "r");
+		fileID2 = $fopen("output_MATLAB.txt", "r");
+		scan_file1 = $fscanf(fileID1, "%x\n", HEX_IN);
+		scan_file2 = $fscanf(fileID2, "%x\n", HEX_OUT);
+		while (!$feof(fileID1) && !$feof(fileID2)) begin
+			if (HEX_IN !== HEX_OUT) begin	// in case of mismatch, display error & stop
+				$display("ERROR: Mismatch detected!");
+				$fclose(fileID1);
+				$fclose(fileID2);
+				$finish;
+			end
+			else begin
+				scan_file1 = $fscanf(fileID1, "%x\n", HEX_IN);
+				scan_file2 = $fscanf(fileID2, "%x\n", HEX_OUT);
+			end
+		end
+		
+		$display("SUCCESS: Simulation matches MATLAB output!");
+		$fclose(fileID1);
+		$fclose(fileID2);
+
+		UNUSED */
+		$finish;
+	end
+	
+
+//------------------------------------//
+
+//---------- Device Under Test ----------//
+	vitDecoder DUT(
+		.iClk(Clk),
+		.iRst(Rst),
+		.iEN(EN),
+		.iData(Data_In),
+		.oData(Data_Out),
+		.oValid(Data_Valid)
+	);
+//---------------------------------------//
+
+endmodule

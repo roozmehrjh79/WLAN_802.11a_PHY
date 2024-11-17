@@ -1,0 +1,2 @@
+RATE=d
+LENGHT=00a

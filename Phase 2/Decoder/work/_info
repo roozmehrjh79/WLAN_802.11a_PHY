@@ -1,0 +1,199 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/FPGA_Projects/WLAN/Phase 1
+vACSU
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 `n_NP;jh<;G6D`IIdRem61
+I`:SX8bYk5CEjQWFmaFeRO3
+Z1 dE:/FPGA_Projects/WLAN/Phase 2/Decoder
+w1624433958
+8E:/FPGA_Projects/WLAN/Phase 2/Decoder/ACSU.v
+FE:/FPGA_Projects/WLAN/Phase 2/Decoder/ACSU.v
+L0 7
+Z2 OL;L;10.6d;65
+Z3 !s108 1624549135.000000
+!s107 E:/FPGA_Projects/WLAN/Phase 2/Decoder/ACSU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 2/Decoder/ACSU.v|
+!i113 0
+Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0
+n@a@c@s@u
+vASPRAM
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 R4_WPTVTcC]Cf1kAd`l3S3
+Ig]T:JoN@UjCGBA]>b^geV2
+R1
+w1624186127
+8E:/FPGA_Projects/WLAN/Phase 2/Decoder/ASPRAM.v
+FE:/FPGA_Projects/WLAN/Phase 2/Decoder/ASPRAM.v
+L0 7
+R2
+R3
+!s107 E:/FPGA_Projects/WLAN/Phase 2/Decoder/ASPRAM.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 2/Decoder/ASPRAM.v|
+!i113 0
+R4
+R5
+n@a@s@p@r@a@m
+vBMU
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 HWflS;Iz=cnY]HFoU3Mm72
+I1^aRE@k6;5_@c8KgjO_k21
+R1
+w1624271333
+8E:/FPGA_Projects/WLAN/Phase 2/Decoder/BMU.v
+FE:/FPGA_Projects/WLAN/Phase 2/Decoder/BMU.v
+L0 7
+R2
+R3
+!s107 E:/FPGA_Projects/WLAN/Phase 2/Decoder/BMU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 2/Decoder/BMU.v|
+!i113 0
+R4
+R5
+n@b@m@u
+vLIFO
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 J^8HE4:P^d7T@PQXBDN3j3
+I0XfRCTPVJoC>A5G53z0D21
+R1
+w1624543876
+8E:/FPGA_Projects/WLAN/Phase 2/Decoder/LIFO.v
+FE:/FPGA_Projects/WLAN/Phase 2/Decoder/LIFO.v
+L0 7
+R2
+Z6 !s108 1624549136.000000
+!s107 E:/FPGA_Projects/WLAN/Phase 2/Decoder/LIFO.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 2/Decoder/LIFO.v|
+!i113 0
+R4
+R5
+n@l@i@f@o
+vPMU
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 AoTd_l7nVB^hXb@o_PDlB2
+IXK]G^BoC5ZZ[jJB3bmZlY0
+R1
+w1624435930
+8E:/FPGA_Projects/WLAN/Phase 2/Decoder/PMU.v
+FE:/FPGA_Projects/WLAN/Phase 2/Decoder/PMU.v
+L0 7
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 2/Decoder/PMU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 2/Decoder/PMU.v|
+!i113 0
+R4
+R5
+n@p@m@u
+vSPRAM
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 2CzSO0A1zMn22i5b^C4kZ2
+ILFB5f1GSfG9^gU`Zjdn]I3
+R1
+w1624435318
+8E:/FPGA_Projects/WLAN/Phase 2/Decoder/SPRAM.v
+FE:/FPGA_Projects/WLAN/Phase 2/Decoder/SPRAM.v
+L0 7
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 2/Decoder/SPRAM.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 2/Decoder/SPRAM.v|
+!i113 0
+R4
+R5
+n@s@p@r@a@m
+vTBU
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 =Ei>]0Hl;2b_Cja601`jm1
+I=CaObWHk]GF;3<gT5UJiY2
+R1
+w1624435239
+8E:/FPGA_Projects/WLAN/Phase 2/Decoder/TBU.v
+FE:/FPGA_Projects/WLAN/Phase 2/Decoder/TBU.v
+L0 7
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 2/Decoder/TBU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 2/Decoder/TBU.v|
+!i113 0
+R4
+R5
+n@t@b@u
+vvitDecoder
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 DfMYmOH[6;jaOfNX9Jk6;1
+I0[cbKlee4]XS5:0Cz9aa32
+R1
+w1624435375
+8E:/FPGA_Projects/WLAN/Phase 2/Decoder/vitDecoder.v
+FE:/FPGA_Projects/WLAN/Phase 2/Decoder/vitDecoder.v
+L0 7
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 2/Decoder/vitDecoder.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 2/Decoder/vitDecoder.v|
+!i113 0
+R4
+R5
+nvit@decoder
+vvitDecoder_tb
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 Nf]7J1=kFDbFfOaV8LO0i2
+IhiKNOSLWeiof<jF06aJCh1
+R1
+w1624530285
+8E:/FPGA_Projects/WLAN/Phase 2/Decoder/vitDecoder_tb.v
+FE:/FPGA_Projects/WLAN/Phase 2/Decoder/vitDecoder_tb.v
+L0 9
+R2
+R6
+!s107 E:/FPGA_Projects/WLAN/Phase 2/Decoder/vitDecoder_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/FPGA_Projects/WLAN/Phase 2/Decoder/vitDecoder_tb.v|
+!i113 0
+R4
+R5
+nvit@decoder_tb

@@ -1,0 +1,8 @@
+verilog work "SPRAM.v"
+verilog work "LIFO.v"
+verilog work "ASPRAM.v"
+verilog work "ACSU.v"
+verilog work "TBU.v"
+verilog work "PMU.v"
+verilog work "BMU.v"
+verilog work "vitDecoder.v"

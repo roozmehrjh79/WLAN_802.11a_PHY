@@ -1,0 +1,5 @@
+verilog work "TX_Scrambler.v"
+verilog work "TX_Controller.v"
+verilog work "RX_Descrambler.v"
+verilog work "RX_Controller.v"
+verilog work "Phase1.v"

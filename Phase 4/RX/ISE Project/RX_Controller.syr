@@ -1,0 +1,971 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: RX_Controller.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "RX_Controller.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "RX_Controller"
+Output Format                      : NGC
+Target Device                      : xc6vcx75t-2-ff484
+
+---- Source Options
+Top Module Name                    : RX_Controller
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\SPRAM.v" into library work
+Parsing module <SPRAM>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\LIFO.v" into library work
+Parsing module <LIFO>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\ASPRAM.v" into library work
+Parsing module <ASPRAM>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\ACSU.v" into library work
+Parsing module <ACSU>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\TBU.v" into library work
+Parsing module <TBU>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\PMU.v" into library work
+Parsing module <PMU>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\BMU.v" into library work
+Parsing module <BMU>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\vitDecoder.v" into library work
+Parsing module <vitDecoder>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\FIFO.v" into library work
+Parsing module <FIFO>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\descrambler.v" into library work
+Parsing module <descrambler>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\deinterleaver.v" into library work
+Parsing module <deinterleaver>.
+Analyzing Verilog file "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\RX_Controller.v" into library work
+Parsing module <RX_Controller>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <RX_Controller>.
+
+Elaborating module <FIFO(ADDR_WIDTH=8)>.
+WARNING:HDLCompiler:1127 - "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\RX_Controller.v" Line 113: Assignment to F0_EMPTY ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\RX_Controller.v" Line 114: Assignment to F0_FULL ignored, since the identifier is never used
+
+Elaborating module <descrambler>.
+
+Elaborating module <vitDecoder>.
+
+Elaborating module <BMU>.
+
+Elaborating module <PMU>.
+
+Elaborating module <ACSU(PM_WIDTH=13)>.
+
+Elaborating module <TBU>.
+
+Elaborating module <ASPRAM>.
+
+Elaborating module <LIFO>.
+
+Elaborating module <SPRAM(DATA_WIDTH=1,ADDR_WIDTH=5,RAM_DEPTH=32)>.
+
+Elaborating module <deinterleaver>.
+WARNING:HDLCompiler:1127 - "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\RX_Controller.v" Line 152: Assignment to DEC0_EN ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <RX_Controller>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\RX_Controller.v".
+        HEADER = 12'b111111111111
+INFO:Xst:3210 - "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\RX_Controller.v" line 106: Output port <oEmpty> of the instance <F0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\RX_Controller.v" line 106: Output port <oFull> of the instance <F0> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <slwClk>.
+    Found 4-bit register for signal <cState>.
+    Found 16-bit register for signal <mainCnt>.
+    Found 11-bit register for signal <SEQ>.
+    Found 18-bit register for signal <SIGNAL>.
+    Found 2-bit register for signal <punct>.
+    Found 1-bit register for signal <oData>.
+    Found 1-bit register for signal <oRX_EN>.
+    Found 1-bit register for signal <delay<1>>.
+    Found 1-bit register for signal <delay<0>>.
+    Found finite state machine <FSM_0> for signal <cState>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 19                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 17                                             |
+    | Clock              | iClk (rising_edge)                             |
+    | Reset              | iRst (positive)                                |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit subtractor for signal <mainCnt[15]_GND_1_o_sub_36_OUT> created at line 285.
+    Found 2-bit subtractor for signal <delay[1]_GND_1_o_sub_51_OUT> created at line 316.
+    Found 5-bit comparator greater for signal <mainCnt[5]_PWR_1_o_LessThan_27_o> created at line 246
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  52 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  30 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <RX_Controller> synthesized.
+
+Synthesizing Unit <FIFO>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\FIFO.v".
+        DATA_WIDTH = 1
+        ADDR_WIDTH = 8
+        RAM_DEPTH = 256
+    Found 8-bit register for signal <rdPtr>.
+    Found 8-bit register for signal <wrPtr>.
+    Found 9-bit register for signal <stPtr>.
+    Found 256-bit register for signal <n0288[255:0]>.
+    Found 9-bit subtractor for signal <stPtr[8]_GND_2_o_sub_11_OUT> created at line 71.
+    Found 8-bit adder for signal <wrPtr[7]_GND_2_o_add_3_OUT> created at line 53.
+    Found 8-bit adder for signal <rdPtr[7]_GND_2_o_add_6_OUT> created at line 61.
+    Found 9-bit adder for signal <stPtr[8]_GND_2_o_add_9_OUT> created at line 69.
+    Found 1-bit 256-to-1 multiplexer for signal <rdPtr[7]_mem[255][0]_Mux_2_o> created at line 43.
+    Found 8-bit comparator equal for signal <EQU> created at line 34
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 281 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred 258 Multiplexer(s).
+Unit <FIFO> synthesized.
+
+Synthesizing Unit <descrambler>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\descrambler.v".
+    Found 7-bit register for signal <LFSR>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <descrambler> synthesized.
+
+Synthesizing Unit <vitDecoder>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\vitDecoder.v".
+    Summary:
+	no macro.
+Unit <vitDecoder> synthesized.
+
+Synthesizing Unit <BMU>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\BMU.v".
+    Found 2-bit adder for signal <oBM00> created at line 23.
+    Found 2-bit adder for signal <oBM10> created at line 24.
+    Found 2-bit adder for signal <oBM01> created at line 25.
+    Found 2-bit adder for signal <oBM11> created at line 26.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <BMU> synthesized.
+
+Synthesizing Unit <PMU>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\PMU.v".
+        PM_WIDTH = 13
+    Found 1-bit register for signal <prepFlg>.
+    Found 1-bit register for signal <latFlg>.
+    Found 5-bit register for signal <oCounter>.
+    Found 1-bit register for signal <oMinFound>.
+    Found 832-bit register for signal <n0135[831:0]>.
+    Found 6-bit register for signal <minPM0>.
+    Found 6-bit register for signal <oMinPM>.
+    Found 6-bit register for signal <minPM1>.
+    Found 13-bit subtractor for signal <SUB0> created at line 132.
+    Found 13-bit subtractor for signal <SUB1> created at line 133.
+    Found 5-bit subtractor for signal <oCounter[4]_GND_6_o_sub_81_OUT> created at line 197.
+    Found 6-bit adder for signal <GND_6_o_PWR_8_o_add_67_OUT> created at line 131.
+    Found 13-bit 64-to-1 multiplexer for signal <MUX00_Addr[5]_memPM[63][12]_wide_mux_69_OUT> created at line 132.
+    Found 13-bit 64-to-1 multiplexer for signal <MUX01_Addr[5]_memPM[63][12]_wide_mux_70_OUT> created at line 132.
+    Found 13-bit 64-to-1 multiplexer for signal <MUX10_Addr[5]_memPM[63][12]_wide_mux_72_OUT> created at line 133.
+    Found 13-bit 64-to-1 multiplexer for signal <MUX11_Addr[5]_memPM[63][12]_wide_mux_73_OUT> created at line 133.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 858 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+Unit <PMU> synthesized.
+
+Synthesizing Unit <ACSU>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\ACSU.v".
+        PM_WIDTH = 13
+    Found 1-bit register for signal <oSP>.
+    Found 13-bit register for signal <oPM>.
+    Found 13-bit subtractor for signal <PM0_SUB_PM1> created at line 35.
+    Found 13-bit adder for signal <PM0_ADD_BM0> created at line 32.
+    Found 13-bit adder for signal <PM1_ADD_BM1> created at line 33.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <ACSU> synthesized.
+
+Synthesizing Unit <TBU>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\TBU.v".
+        DATA_WIDTH = 64
+        ADDR_WIDTH = 5
+        RAM_DEPTH = 32
+    Found 1-bit register for signal <cLIFO>.
+    Found 1-bit register for signal <oDEC_EN>.
+    Found 1-bit register for signal <traceFlag>.
+    Found 2-bit register for signal <updatePtr>.
+    Found 6-bit register for signal <cBit>.
+    Found 2-bit register for signal <tracePtr>.
+    Found finite state machine <FSM_1> for signal <updatePtr>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 2                                              |
+    | Clock              | iClk (rising_edge)                             |
+    | Reset              | iRst (positive)                                |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <tracePtr>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 2                                              |
+    | Clock              | iClk (rising_edge)                             |
+    | Reset              | iRst (positive)                                |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 01                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit subtractor for signal <traceAddr> created at line 90.
+    Found 6-bit adder for signal <GND_9_o_PWR_12_o_add_17_OUT> created at line 210.
+    Found 1-bit 64-to-1 multiplexer for signal <TB_BIT[5]_cData[63]_Mux_16_o> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<63>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<62>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<61>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<60>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<59>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<58>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<57>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<56>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<55>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<54>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<53>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<52>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<51>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<50>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<49>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<48>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<47>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<46>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<45>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<44>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<43>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<42>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<41>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<40>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<39>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<38>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<37>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<36>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<35>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<34>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<33>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<32>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<31>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<30>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<29>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<28>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<27>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<26>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<25>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<24>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<23>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<22>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<21>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<20>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<19>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<18>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<17>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<16>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<15>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<14>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<13>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<12>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<11>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<10>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<9>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<8>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<7>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<6>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<5>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<4>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<3>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<2>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<1>> created at line 210.
+    Found 1-bit 4-to-1 multiplexer for signal <cData<0>> created at line 210.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+	inferred  72 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <TBU> synthesized.
+
+Synthesizing Unit <ASPRAM>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\ASPRAM.v".
+        DATA_WIDTH = 64
+        ADDR_WIDTH = 5
+        RAM_DEPTH = 32
+    Found 2048-bit register for signal <n0040[2047:0]>.
+    Found 64-bit 32-to-1 multiplexer for signal <iAddr[4]_mem[31][63]_wide_mux_0_OUT> created at line 32.
+    Summary:
+	inferred 2048 D-type flip-flop(s).
+	inferred  34 Multiplexer(s).
+Unit <ASPRAM> synthesized.
+
+Synthesizing Unit <LIFO>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\LIFO.v".
+        DATA_WIDTH = 1
+        ADDR_WIDTH = 5
+        RAM_DEPTH = 32
+    Found 6-bit register for signal <stackPtr>.
+    Found 6-bit subtractor for signal <decPtr> created at line 38.
+    Found 6-bit adder for signal <stackPtr[5]_GND_11_o_add_2_OUT> created at line 39.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <LIFO> synthesized.
+
+Synthesizing Unit <SPRAM>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\SPRAM.v".
+        DATA_WIDTH = 1
+        ADDR_WIDTH = 5
+        RAM_DEPTH = 32
+    Found 1-bit register for signal <oData>.
+    Found 32-bit register for signal <n0045[31:0]>.
+    Found 1-bit 32-to-1 multiplexer for signal <iAddr[4]_mem[31][0]_Mux_1_o> created at line 39.
+    Summary:
+	inferred  33 D-type flip-flop(s).
+	inferred  33 Multiplexer(s).
+Unit <SPRAM> synthesized.
+
+Synthesizing Unit <deinterleaver>.
+    Related source file is "E:\FPGA_Projects\WLAN\Phase 4\RX\ISE Project\deinterleaver.v".
+    Found 1-bit register for signal <selReg>.
+    Found 1-bit register for signal <OUT_EN>.
+    Found 4-bit register for signal <rowCnt>.
+    Found 4-bit register for signal <colCnt>.
+    Found 192-bit register for signal <bReg>.
+    Found 192-bit register for signal <fReg>.
+    Found 4-bit register for signal <RATE>.
+    Found 4-bit subtractor for signal <Ni[3]_GND_15_o_sub_2_OUT> created at line 51.
+    Found 4-bit subtractor for signal <rowCnt[3]_GND_15_o_sub_7_OUT> created at line 68.
+    Found 8-bit adder for signal <kPtr> created at line 50.
+    Found 4-bit adder for signal <rowCnt[3]_GND_15_o_add_21_OUT> created at line 98.
+    Found 4-bit adder for signal <colCnt[3]_GND_15_o_add_25_OUT> created at line 106.
+    Found 4x4-bit Read Only RAM for signal <_n0487>
+    Found 4-bit comparator equal for signal <ROW_EXP> created at line 51
+    Summary:
+	inferred   1 RAM(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred 398 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred 390 Multiplexer(s).
+Unit <deinterleaver> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 216
+ 13-bit adder                                          : 128
+ 13-bit subtractor                                     : 66
+ 16-bit subtractor                                     : 1
+ 2-bit adder                                           : 4
+ 2-bit subtractor                                      : 1
+ 4-bit adder                                           : 2
+ 4-bit addsub                                          : 1
+ 4-bit subtractor                                      : 1
+ 5-bit subtractor                                      : 2
+ 6-bit adder                                           : 4
+ 6-bit subtractor                                      : 2
+ 8-bit adder                                           : 3
+ 9-bit addsub                                          : 1
+# Registers                                            : 170
+ 1-bit register                                        : 79
+ 11-bit register                                       : 1
+ 13-bit register                                       : 64
+ 16-bit register                                       : 1
+ 18-bit register                                       : 1
+ 192-bit register                                      : 2
+ 2-bit register                                        : 1
+ 2048-bit register                                     : 3
+ 256-bit register                                      : 1
+ 32-bit register                                       : 2
+ 4-bit register                                        : 3
+ 5-bit register                                        : 1
+ 6-bit register                                        : 6
+ 7-bit register                                        : 1
+ 8-bit register                                        : 2
+ 832-bit register                                      : 1
+ 9-bit register                                        : 1
+# Comparators                                          : 3
+ 4-bit comparator equal                                : 1
+ 5-bit comparator greater                              : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 998
+ 1-bit 2-to-1 multiplexer                              : 730
+ 1-bit 256-to-1 multiplexer                            : 1
+ 1-bit 32-to-1 multiplexer                             : 2
+ 1-bit 4-to-1 multiplexer                              : 64
+ 1-bit 64-to-1 multiplexer                             : 1
+ 13-bit 2-to-1 multiplexer                             : 64
+ 13-bit 64-to-1 multiplexer                            : 4
+ 16-bit 2-to-1 multiplexer                             : 6
+ 2-bit 2-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 5
+ 5-bit 2-to-1 multiplexer                              : 6
+ 6-bit 2-to-1 multiplexer                              : 11
+ 64-bit 2-to-1 multiplexer                             : 99
+ 64-bit 32-to-1 multiplexer                            : 3
+# FSMs                                                 : 3
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <FIFO>.
+The following registers are absorbed into counter <rdPtr>: 1 register on signal <rdPtr>.
+The following registers are absorbed into counter <wrPtr>: 1 register on signal <wrPtr>.
+The following registers are absorbed into counter <stPtr>: 1 register on signal <stPtr>.
+Unit <FIFO> synthesized (advanced).
+
+Synthesizing (advanced) Unit <LIFO>.
+The following registers are absorbed into counter <stackPtr>: 1 register on signal <stackPtr>.
+Unit <LIFO> synthesized (advanced).
+
+Synthesizing (advanced) Unit <PMU>.
+The following registers are absorbed into counter <oCounter>: 1 register on signal <oCounter>.
+Unit <PMU> synthesized (advanced).
+
+Synthesizing (advanced) Unit <deinterleaver>.
+The following registers are absorbed into counter <rowCnt>: 1 register on signal <rowCnt>.
+The following registers are absorbed into counter <colCnt>: 1 register on signal <colCnt>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0487> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <RATE<3:2>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <deinterleaver> synthesized (advanced).
+WARNING:Xst:2677 - Node <SIGNAL_0> of sequential type is unconnected in block <RX_Controller>.
+WARNING:Xst:2677 - Node <SIGNAL_13> of sequential type is unconnected in block <RX_Controller>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 208
+ 13-bit adder                                          : 128
+ 13-bit subtractor                                     : 66
+ 16-bit subtractor                                     : 1
+ 2-bit adder                                           : 4
+ 2-bit subtractor                                      : 1
+ 4-bit addsub                                          : 1
+ 4-bit subtractor                                      : 1
+ 5-bit subtractor                                      : 1
+ 6-bit adder                                           : 4
+ 8-bit adder                                           : 1
+# Counters                                             : 8
+ 4-bit up counter                                      : 2
+ 5-bit down counter                                    : 1
+ 6-bit down counter                                    : 2
+ 8-bit up counter                                      : 2
+ 9-bit updown counter                                  : 1
+# Registers                                            : 8671
+ Flip-Flops                                            : 8671
+# Comparators                                          : 3
+ 4-bit comparator equal                                : 1
+ 5-bit comparator greater                              : 1
+ 8-bit comparator equal                                : 1
+# Multiplexers                                         : 7228
+ 1-bit 2-to-1 multiplexer                              : 6871
+ 1-bit 256-to-1 multiplexer                            : 1
+ 1-bit 32-to-1 multiplexer                             : 194
+ 1-bit 4-to-1 multiplexer                              : 64
+ 1-bit 64-to-1 multiplexer                             : 1
+ 13-bit 2-to-1 multiplexer                             : 64
+ 13-bit 64-to-1 multiplexer                            : 4
+ 16-bit 2-to-1 multiplexer                             : 6
+ 2-bit 2-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 2-to-1 multiplexer                              : 6
+ 6-bit 2-to-1 multiplexer                              : 9
+ 64-bit 2-to-1 multiplexer                             : 3
+# FSMs                                                 : 3
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <cState[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <DEC0/TBU0/FSM_1> on signal <updatePtr[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <DEC0/TBU0/FSM_2> on signal <tracePtr[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 01    | 01
+ 00    | 00
+ 10    | 10
+-------------------
+
+Optimizing unit <RX_Controller> ...
+
+Optimizing unit <FIFO> ...
+
+Optimizing unit <deinterleaver> ...
+
+Optimizing unit <descrambler> ...
+
+Optimizing unit <vitDecoder> ...
+
+Optimizing unit <TBU> ...
+
+Optimizing unit <LIFO> ...
+
+Optimizing unit <SPRAM> ...
+WARNING:Xst:1710 - FF/Latch <DEC0/PMU0/minPM1_5> (without init value) has a constant value of 1 in block <RX_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DEC0/PMU0/minPM0_5> (without init value) has a constant value of 0 in block <RX_Controller>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block RX_Controller, actual ratio is 39.
+FlipFlop DEC0/PMU0/latFlg has been replicated 1 time(s)
+FlipFlop DEC0/PMU0/oCounter_0 has been replicated 1 time(s)
+FlipFlop DEC0/TBU0/updatePtr_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop DEC0/TBU0/updatePtr_FSM_FFd2 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 8731
+ Flip-Flops                                            : 8731
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : RX_Controller.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 19076
+#      GND                         : 1
+#      INV                         : 85
+#      LUT1                        : 1423
+#      LUT2                        : 844
+#      LUT3                        : 7320
+#      LUT4                        : 69
+#      LUT5                        : 241
+#      LUT6                        : 4711
+#      MUXCY                       : 2365
+#      MUXF7                       : 228
+#      MUXF8                       : 17
+#      VCC                         : 1
+#      XORCY                       : 1771
+# FlipFlops/Latches                : 8731
+#      FDC                         : 46
+#      FDC_1                       : 1
+#      FDCE                        : 8660
+#      FDP                         : 2
+#      FDPE                        : 22
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 5
+#      IBUF                        : 2
+#      OBUF                        : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vcx75tff484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            8730  out of  93120     9%  
+ Number of Slice LUTs:                14693  out of  46560    31%  
+    Number used as Logic:             14693  out of  46560    31%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:  15516
+   Number with an unused Flip Flop:    6786  out of  15516    43%  
+   Number with an unused LUT:           823  out of  15516     5%  
+   Number of fully used LUT-FF pairs:  7907  out of  15516    50%  
+   Number of unique control sets:        25
+
+IO Utilization: 
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of    240     2%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+iClk                               | BUFGP                  | 731   |
+slwClk                             | BUFG                   | 8000  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.937ns (Maximum Frequency: 202.559MHz)
+   Minimum input arrival time before clock: 2.766ns
+   Maximum output required time after clock: 1.416ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'iClk'
+  Clock period: 3.658ns (frequency: 273.393MHz)
+  Total number of paths / destination ports: 202803 / 1738
+-------------------------------------------------------------------------
+Delay:               3.658ns (Levels of Logic = 8)
+  Source:            F0/rdPtr_1 (FF)
+  Destination:       DINT0/fReg_191 (FF)
+  Source Clock:      iClk rising
+  Destination Clock: iClk rising
+
+  Data Path: F0/rdPtr_1 to DINT0/fReg_191
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            66   0.317   0.832  F0/rdPtr_1 (F0/rdPtr_1)
+     LUT6:I0->O            1   0.061   0.000  F0/Mmux_rdPtr[7]_mem[255][0]_Mux_2_o_1314 (F0/Mmux_rdPtr[7]_mem[255][0]_Mux_2_o_1314)
+     MUXF7:I1->O           1   0.211   0.000  F0/Mmux_rdPtr[7]_mem[255][0]_Mux_2_o_12_f7_4 (F0/Mmux_rdPtr[7]_mem[255][0]_Mux_2_o_12_f75)
+     MUXF8:I0->O           1   0.149   0.566  F0/Mmux_rdPtr[7]_mem[255][0]_Mux_2_o_10_f8_3 (F0/Mmux_rdPtr[7]_mem[255][0]_Mux_2_o_10_f84)
+     LUT6:I2->O            1   0.061   0.000  F0/Mmux_rdPtr[7]_mem[255][0]_Mux_2_o_51 (F0/Mmux_rdPtr[7]_mem[255][0]_Mux_2_o_51)
+     MUXF7:I1->O           1   0.211   0.000  F0/Mmux_rdPtr[7]_mem[255][0]_Mux_2_o_4_f7 (F0/Mmux_rdPtr[7]_mem[255][0]_Mux_2_o_4_f7)
+     MUXF8:I0->O           1   0.149   0.426  F0/Mmux_rdPtr[7]_mem[255][0]_Mux_2_o_2_f8 (F0/rdPtr[7]_mem[255][0]_Mux_2_o)
+     LUT6:I4->O          384   0.061   0.552  Mmux_DINT0_IN1 (DINT0_IN)
+     LUT5:I4->O            1   0.061   0.000  DINT0/fReg[191]_GND_15_o_mux_32_OUT<191>1 (DINT0/fReg[191]_GND_15_o_mux_32_OUT<191>)
+     FDCE:D                   -0.002          DINT0/fReg_191
+    ----------------------------------------
+    Total                      3.658ns (1.281ns logic, 2.377ns route)
+                                       (35.0% logic, 65.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'slwClk'
+  Clock period: 4.937ns (frequency: 202.559MHz)
+  Total number of paths / destination ports: 557923 / 15067
+-------------------------------------------------------------------------
+Delay:               4.937ns (Levels of Logic = 19)
+  Source:            DEC0/PMU0/oCounter_3 (FF)
+  Destination:       DEC0/PMU0/oMinPM_5 (FF)
+  Source Clock:      slwClk rising
+  Destination Clock: slwClk rising
+
+  Data Path: DEC0/PMU0/oCounter_3 to DEC0/PMU0/oMinPM_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q            17   0.317   0.784  DEC0/PMU0/oCounter_3 (DEC0/PMU0/oCounter_3)
+     LUT6:I1->O          209   0.061   0.589  DEC0/PMU0/Mmux_MUX01_Addr11 (DEC0/PMU0/MUX01_Addr<0>)
+     LUT6:I4->O            1   0.061   0.566  DEC0/PMU0/Mmux_MUX01_Addr[5]_memPM[63][12]_wide_mux_70_OUT_133 (DEC0/PMU0/Mmux_MUX01_Addr[5]_memPM[63][12]_wide_mux_70_OUT_133)
+     LUT6:I2->O            1   0.061   0.566  DEC0/PMU0/Mmux_MUX01_Addr[5]_memPM[63][12]_wide_mux_70_OUT_8 (DEC0/PMU0/Mmux_MUX01_Addr[5]_memPM[63][12]_wide_mux_70_OUT_8)
+     LUT6:I2->O            1   0.061   0.357  DEC0/PMU0/MUX01_Addr<5>1 (DEC0/PMU0/MUX01_Addr[5]_memPM[63][12]_wide_mux_70_OUT<0>)
+     LUT4:I3->O            1   0.061   0.000  DEC0/PMU0/Msub_SUB0_lut<0> (DEC0/PMU0/Msub_SUB0_lut<0>)
+     MUXCY:S->O            1   0.248   0.000  DEC0/PMU0/Msub_SUB0_cy<0> (DEC0/PMU0/Msub_SUB0_cy<0>)
+     MUXCY:CI->O           1   0.017   0.000  DEC0/PMU0/Msub_SUB0_cy<1> (DEC0/PMU0/Msub_SUB0_cy<1>)
+     MUXCY:CI->O           1   0.017   0.000  DEC0/PMU0/Msub_SUB0_cy<2> (DEC0/PMU0/Msub_SUB0_cy<2>)
+     MUXCY:CI->O           1   0.017   0.000  DEC0/PMU0/Msub_SUB0_cy<3> (DEC0/PMU0/Msub_SUB0_cy<3>)
+     MUXCY:CI->O           1   0.017   0.000  DEC0/PMU0/Msub_SUB0_cy<4> (DEC0/PMU0/Msub_SUB0_cy<4>)
+     MUXCY:CI->O           1   0.017   0.000  DEC0/PMU0/Msub_SUB0_cy<5> (DEC0/PMU0/Msub_SUB0_cy<5>)
+     MUXCY:CI->O           1   0.017   0.000  DEC0/PMU0/Msub_SUB0_cy<6> (DEC0/PMU0/Msub_SUB0_cy<6>)
+     MUXCY:CI->O           1   0.017   0.000  DEC0/PMU0/Msub_SUB0_cy<7> (DEC0/PMU0/Msub_SUB0_cy<7>)
+     MUXCY:CI->O           1   0.017   0.000  DEC0/PMU0/Msub_SUB0_cy<8> (DEC0/PMU0/Msub_SUB0_cy<8>)
+     MUXCY:CI->O           1   0.017   0.000  DEC0/PMU0/Msub_SUB0_cy<9> (DEC0/PMU0/Msub_SUB0_cy<9>)
+     MUXCY:CI->O           1   0.017   0.000  DEC0/PMU0/Msub_SUB0_cy<10> (DEC0/PMU0/Msub_SUB0_cy<10>)
+     MUXCY:CI->O           0   0.017   0.000  DEC0/PMU0/Msub_SUB0_cy<11> (DEC0/PMU0/Msub_SUB0_cy<11>)
+     XORCY:CI->O          11   0.204   0.395  DEC0/PMU0/Msub_SUB0_xor<12> (DEC0/PMU0/SUB0<12>)
+     INV:I->O              1   0.079   0.339  DEC0/PMU0/Mmux_minPM1[5]_minPM0[5]_mux_93_OUT61_INV_0 (DEC0/PMU0/minPM1[5]_minPM0[5]_mux_93_OUT<5>)
+     FDCE:D                   -0.002          DEC0/PMU0/oMinPM_5
+    ----------------------------------------
+    Total                      4.937ns (1.340ns logic, 3.597ns route)
+                                       (27.1% logic, 72.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'iClk'
+  Total number of paths / destination ports: 1003 / 1003
+-------------------------------------------------------------------------
+Offset:              2.766ns (Levels of Logic = 4)
+  Source:            iData (PAD)
+  Destination:       mainCnt_0 (FF)
+  Destination Clock: iClk rising
+
+  Data Path: iData to mainCnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           259   0.003   0.866  iData_IBUF (iData_IBUF)
+     LUT6:I1->O            2   0.061   0.362  SEQ_OK<10>2 (SEQ_OK<10>1)
+     LUT6:I5->O            8   0.061   0.733  cState[3]_SEQ_OK_AND_633_o1 (cState[3]_SEQ_OK_AND_633_o)
+     LUT5:I0->O           16   0.061   0.422  _n0155_inv (_n0155_inv)
+     FDCE:CE                   0.196          mainCnt_0
+    ----------------------------------------
+    Total                      2.766ns (0.382ns logic, 2.384ns route)
+                                       (13.8% logic, 86.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'slwClk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.659ns (Levels of Logic = 1)
+  Source:            oData (FF)
+  Destination:       oData (PAD)
+  Source Clock:      slwClk rising
+
+  Data Path: oData to oData
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.317   0.339  oData (oData_OBUF)
+     OBUF:I->O                 0.003          oData_OBUF (oData)
+    ----------------------------------------
+    Total                      0.659ns (0.320ns logic, 0.339ns route)
+                                       (48.5% logic, 51.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'iClk'
+  Total number of paths / destination ports: 4 / 1
+-------------------------------------------------------------------------
+Offset:              1.416ns (Levels of Logic = 2)
+  Source:            cState_FSM_FFd3 (FF)
+  Destination:       oBusy (PAD)
+  Source Clock:      iClk rising
+
+  Data Path: cState_FSM_FFd3 to oBusy
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             30   0.317   0.695  cState_FSM_FFd3 (cState_FSM_FFd3)
+     LUT4:I0->O            1   0.061   0.339  oBusy1 (oBusy_OBUF)
+     OBUF:I->O                 0.003          oBusy_OBUF (oBusy)
+    ----------------------------------------
+    Total                      1.416ns (0.381ns logic, 1.035ns route)
+                                       (26.9% logic, 73.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock iClk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+iClk           |    3.658|         |    1.069|         |
+slwClk         |    2.369|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock slwClk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+iClk           |    5.235|         |         |         |
+slwClk         |    4.937|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 85.00 secs
+Total CPU time to Xst completion: 85.29 secs
+ 
+--> 
+
+Total memory usage is 4723116 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

@@ -1,0 +1,2 @@
+RATE=9
+LENGHT=00a

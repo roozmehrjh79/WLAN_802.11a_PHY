@@ -1,0 +1,64 @@
+{E:/FPGA_Projects/WLAN/Phase 2/Decoder/ACSU.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 2/Decoder/ACSU.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module ACSU
+
+Top level modules:
+	ACSU
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 2/Decoder/ASPRAM.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 2/Decoder/ASPRAM.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module ASPRAM
+
+Top level modules:
+	ASPRAM
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 2/Decoder/BMU.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 2/Decoder/BMU.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module BMU
+
+Top level modules:
+	BMU
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 2/Decoder/vitDecoder.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 2/Decoder/vitDecoder.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module vitDecoder
+
+Top level modules:
+	vitDecoder
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 2/Decoder/vitDecoder_tb.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 2/Decoder/vitDecoder_tb.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module vitDecoder_tb
+
+Top level modules:
+	vitDecoder_tb
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 2/Decoder/PMU.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 2/Decoder/PMU.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module PMU
+
+Top level modules:
+	PMU
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 2/Decoder/LIFO.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 2/Decoder/LIFO.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module LIFO
+
+Top level modules:
+	LIFO
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 2/Decoder/TBU.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 2/Decoder/TBU.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module TBU
+
+Top level modules:
+	TBU
+
+} {} {}} {E:/FPGA_Projects/WLAN/Phase 2/Decoder/SPRAM.v} {1 {vlog -work work -vopt -stats=none {E:/FPGA_Projects/WLAN/Phase 2/Decoder/SPRAM.v}
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module SPRAM
+
+Top level modules:
+	SPRAM
+
+} {} {}}

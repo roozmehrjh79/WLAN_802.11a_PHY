@@ -1,0 +1,2 @@
+verilog work "convEncoder.v"
+verilog work "TX_Controller.v"

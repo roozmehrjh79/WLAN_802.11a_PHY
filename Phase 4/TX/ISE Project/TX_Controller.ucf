@@ -1,0 +1,4 @@
+
+#Created by Constraints Editor (xc6vcx75t-ff484-2) - 2021/07/08
+NET "iClk" TNM_NET = iClk;
+TIMESPEC TS_iClk = PERIOD "iClk" 40 ns HIGH 50%;
